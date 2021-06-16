@@ -1,5 +1,5 @@
 const fs = require("fs");
-const words = fs.readFileSync("wordlist.txt", "utf-8").split("\n");
+const words = require("./wordlist.json").words;
 export default function handler(req, res) {
   const nextIndex = getRandomInt(0, words.length - 1);
   res.status(200).json({ word: words[nextIndex], totalCount: words.length });

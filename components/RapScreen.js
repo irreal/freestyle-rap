@@ -7,7 +7,7 @@ export default function RapScreen() {
   useInterval(async () => {
     const data = await (await fetch("api/word")).json();
     setWord(data.word);
-  }, 500);
+  }, 2000);
 
   return (
     <>
